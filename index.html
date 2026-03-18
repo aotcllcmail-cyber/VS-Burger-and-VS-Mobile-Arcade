@@ -1322,6 +1322,15 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 32px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .build-pick-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 20;
   }
 
   .build-pick-btn {
@@ -1396,6 +1405,7 @@
 
   /* ─── BUILD YOUR EVENT ─── */
   .build { background: var(--black); }
+  .build .container { position: relative; z-index: 1; }
 
   .build-slideshow {
     position: relative;
@@ -1506,6 +1516,8 @@
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .build-track .active .build-slide-content::after {
@@ -1792,43 +1804,43 @@
     <h2 class="section-title reveal">Build Your<br>Event</h2>
 
       <div class="build-picker" id="buildPicker">
-        <button class="build-pick-btn active" data-slide="0">
+        <button class="build-pick-btn active" data-slide="0" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=0;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🕹️</span>
           <span class="build-pick-label">VS Arcade</span>
         </button>
-        <button class="build-pick-btn" data-slide="1">
+        <button class="build-pick-btn" data-slide="1" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=1;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">📺</span>
           <span class="build-pick-label">LED Displays</span>
         </button>
-        <button class="build-pick-btn" data-slide="2">
+        <button class="build-pick-btn" data-slide="2" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=2;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🥽</span>
           <span class="build-pick-label">Pop-Up VR</span>
         </button>
-        <button class="build-pick-btn" data-slide="3">
+        <button class="build-pick-btn" data-slide="3" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=3;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🏰</span>
           <span class="build-pick-label">Bouncy House</span>
         </button>
-        <button class="build-pick-btn" data-slide="4">
+        <button class="build-pick-btn" data-slide="4" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=4;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">📸</span>
           <span class="build-pick-label">Photo Booth</span>
         </button>
-        <button class="build-pick-btn" data-slide="5">
+        <button class="build-pick-btn" data-slide="5" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=5;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🎲</span>
           <span class="build-pick-label">Family Games</span>
         </button>
-        <button class="build-pick-btn" data-slide="6">
+        <button class="build-pick-btn" data-slide="6" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=6;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🎈</span>
           <span class="build-pick-label">Decorations</span>
         </button>
-        <button class="build-pick-btn" data-slide="7">
+        <button class="build-pick-btn" data-slide="7" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=7;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🖥️</span>
           <span class="build-pick-label">Extra Displays</span>
         </button>
-        <button class="build-pick-btn" data-slide="8">
+        <button class="build-pick-btn" data-slide="8" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=8;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🪑</span>
           <span class="build-pick-label">Tables & Chairs</span>
         </button>
-        <button class="build-pick-btn" data-slide="9">
+        <button class="build-pick-btn" data-slide="9" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=9;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🍔</span>
           <span class="build-pick-label">VS Burger</span>
         </button>
@@ -2003,8 +2015,8 @@
     <h2 class="section-title">Gallery &amp; Videos</h2>
 
     <div class="gallery-tabs">
-      <button class="gallery-tab active" id="tab-photos">📸 Photos</button>
-      <button class="gallery-tab" id="tab-videos">🎬 Videos</button>
+      <button class="gallery-tab active" id="tab-photos" onclick="(function(){['photos','videos'].forEach(function(p){var el=document.getElementById('panel-'+p);var t=document.getElementById('tab-'+p);if(el)el.style.display=(p==='photos')?'block':'none';if(t)t.classList.toggle('active',p==='photos');});})()">📸 Photos</button>
+      <button class="gallery-tab" id="tab-videos" onclick="(function(){['photos','videos'].forEach(function(p){var el=document.getElementById('panel-'+p);var t=document.getElementById('tab-'+p);if(el)el.style.display=(p==='videos')?'block':'none';if(t)t.classList.toggle('active',p==='videos');});})()">🎬 Videos</button>
     </div>
 
     <!-- Photos panel -->
@@ -2079,7 +2091,7 @@
           <div class="contact-item">
             <div class="contact-icon">✉️</div>
             <div class="contact-text">
-              <a href="mailto:vsmobilearcade@gmail.com">vsmobilearcade@gmail.com</a>
+              <a href="/cdn-cgi/l/email-protection#1167627c7e73787d7470637270757451767c70787d3f727e7c"><span class="__cf_email__" data-cfemail="84f2f7e9ebe6ede8e1e5f6e7e5e0e1c4e3e9e5ede8aae7ebe9">[email&#160;protected]</span></a>
               <small>Send us an Email</small>
             </div>
           </div>
@@ -2225,7 +2237,7 @@
         <div class="footer-heading">Contact</div>
         <ul class="footer-links">
           <li><a href="tel:7735777182">📞 (773) 577-7182</a></li>
-          <li><a href="mailto:vsmobilearcade@gmail.com">✉️ vsmobilearcade@gmail.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#2650554b49444f4a4347544547424366414b474f4a0845494b">✉️ <span class="__cf_email__" data-cfemail="1d6b6e70727f7471787c6f7e7c79785d7a707c7471337e7270">[email&#160;protected]</span></a></li>
           <li><a>📍 Chicago, IL &amp; Surrounding Areas</a></li>
           <li><a href="https://www.instagram.com/versusmobilearcade/?hl=en" target="_blank">📷 @versusmobilearcade</a></li>
           <li><a href="https://www.facebook.com/search/top?q=versus%20mobile%20arcade" target="_blank">👍 Versus Mobile Arcade</a></li>
@@ -2248,47 +2260,13 @@
 <!-- TOAST -->
 <div class="toast" id="toast">✓ Booking Request Sent!</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.addEventListener('DOMContentLoaded', function() {
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vs_app.js"></script>
 
-  // ─── REVEAL ───
-  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
-
-  // ─── GALLERY TABS ───
-  var tabPhotos = document.getElementById('tab-photos');
-  var tabVideos = document.getElementById('tab-videos');
-  function showPanel(name) {
-    ['photos','videos'].forEach(function(p) {
-      var el = document.getElementById('panel-'+p);
-      var t  = document.getElementById('tab-'+p);
-      if (el) el.style.display = (p===name) ? 'block' : 'none';
-      if (t)  t.classList.toggle('active', p===name);
-    });
-  }
-  if (tabPhotos) tabPhotos.addEventListener('click', function(){ showPanel('photos'); });
-  if (tabVideos) tabVideos.addEventListener('click', function(){ showPanel('videos'); });
-  showPanel('photos');
-
-  // ─── LIGHTBOX ───
-  document.querySelectorAll('.lightbox-trigger').forEach(function(item) {
-    item.addEventListener('click', function() {
-      var img = item.querySelector('img');
-      if (!img) return;
-      var lb = document.getElementById('lightbox');
-      var lbImg = document.getElementById('lightbox-img');
-      if (!lb || !lbImg) return;
-      lbImg.src = img.src;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox();
-  });
-
-  // ─── CALENDAR ───
+<script>
+(function() {
   var calDate = new Date();
   var selectedDate = null;
+
   function renderCalendar() {
     var grid = document.getElementById('calGrid');
     var label = document.getElementById('calMonth');
@@ -2299,131 +2277,49 @@ document.addEventListener('DOMContentLoaded', function() {
     grid.innerHTML = '';
     var first = new Date(calDate.getFullYear(), calDate.getMonth(), 1).getDay();
     var total = new Date(calDate.getFullYear(), calDate.getMonth()+1, 0).getDate();
-    for (var i=0; i<first; i++) {
-      var e2 = document.createElement('div');
-      e2.className = 'cal-day empty';
-      grid.appendChild(e2);
+    for (var i = 0; i < first; i++) {
+      var emp = document.createElement('div');
+      emp.className = 'cal-day empty';
+      grid.appendChild(emp);
     }
-    for (var d=1; d<=total; d++) {
-      (function(day){
+    for (var d = 1; d <= total; d++) {
+      (function(day) {
         var el = document.createElement('div');
         el.className = 'cal-day';
         el.textContent = day;
         var thisDate = new Date(calDate.getFullYear(), calDate.getMonth(), day);
-        if (thisDate < today) el.classList.add('past');
-        else if (thisDate.getTime()===today.getTime()) el.classList.add('today');
-        if (selectedDate && thisDate.toDateString()===selectedDate.toDateString()) el.classList.add('selected');
+        if (thisDate < today) { el.classList.add('past'); }
+        else if (thisDate.getTime() === today.getTime()) { el.classList.add('today'); }
+        if (selectedDate && thisDate.toDateString() === selectedDate.toDateString()) { el.classList.add('selected'); }
         if (!el.classList.contains('past')) {
-          el.addEventListener('click', function() {
+          el.onclick = function() {
             selectedDate = thisDate;
             renderCalendar();
-            var m2=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            var lbl=document.getElementById('selectedDateLabel');
-            var inp=document.getElementById('preferred_date_input');
-            if (lbl) lbl.textContent='\u2713 Selected: '+m2[thisDate.getMonth()]+' '+day+', '+thisDate.getFullYear();
-            if (inp) inp.value=m2[thisDate.getMonth()]+' '+day+', '+thisDate.getFullYear();
-          });
+            var m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            var lbl = document.getElementById('selectedDateLabel');
+            var inp = document.getElementById('preferred_date_input');
+            if (lbl) lbl.textContent = '\u2713 Selected: ' + m[thisDate.getMonth()] + ' ' + day + ', ' + thisDate.getFullYear();
+            if (inp) inp.value = m[thisDate.getMonth()] + ' ' + day + ', ' + thisDate.getFullYear();
+          };
         }
         grid.appendChild(el);
       })(d);
     }
   }
-  renderCalendar();
-  window.changeMonth = function(dir){ calDate.setMonth(calDate.getMonth()+dir); renderCalendar(); };
 
-  // ─── TIME PICKER ───
-  var timePicker = document.getElementById('timePicker');
-  if (timePicker) {
-    timePicker.querySelectorAll('.time-slot').forEach(function(slot) {
-      slot.addEventListener('click', function() {
-        timePicker.querySelectorAll('.time-slot').forEach(function(s){ s.classList.remove('selected'); });
-        slot.classList.add('selected');
-        var t=slot.getAttribute('data-time');
-        var lbl=document.getElementById('selectedTimeLabel');
-        var inp=document.getElementById('preferred_time_input');
-        if (lbl) lbl.textContent='\u2713 Selected: '+t;
-        if (inp) inp.value=t;
-      });
-    });
-  }
-
-  // ─── EMAILJS ───
-  emailjs.init({ publicKey: '5mfYES39vq8YEQNYj' });
-  window.submitForm = function(e) {
-    e.preventDefault();
-    var btn=document.getElementById('submitBtn');
-    var form=document.getElementById('bookingForm');
-    btn.textContent='Sending…'; btn.style.opacity='0.7'; btn.style.pointerEvents='none';
-    var params={
-      first_name: form.querySelector('[name="first_name"]').value,
-      last_name:  form.querySelector('[name="last_name"]').value,
-      phone:      form.querySelector('[name="phone"]').value,
-      reply_to:   form.querySelector('[name="reply_to"]').value||'Not provided',
-      event_type: form.querySelector('[name="event_type"]').value||'Not specified',
-      package_interest: form.querySelector('[name="package_interest"]').value||'Not specified',
-      preferred_date: (document.getElementById('preferred_date_input')||{}).value||'Not specified',
-      preferred_time: (document.getElementById('preferred_time_input')||{}).value||'Not specified',
-      message: form.querySelector('[name="message"]').value||'None'
-    };
-    var sends=['aotcllcmail@gmail.com','vsmobilearcade@gmail.com','versusmobilearcade@gmail.com'].map(function(to_email){
-      return emailjs.send('service_g7xmssd','template_d2vofal',Object.assign({},params,{to_email:to_email}));
-    });
-    Promise.all(sends).then(function(){
-      btn.textContent='\u2713 Your Request Has Been Received!';
-      btn.classList.add('success'); btn.style.opacity='1';
-      form.reset(); selectedDate=null;
-      var lbl=document.getElementById('selectedDateLabel'); if(lbl)lbl.textContent='';
-      var tlbl=document.getElementById('selectedTimeLabel'); if(tlbl)tlbl.textContent='';
-      if(timePicker) timePicker.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});
-      renderCalendar();
-    }).catch(function(err){
-      console.error(err);
-      btn.textContent='Send Booking Request \u2192'; btn.style.opacity='1'; btn.style.pointerEvents='auto';
-      showToast('\u26a0 Something went wrong. Please call (773) 577-7182.');
-    });
+  window.changeMonth = function(dir) {
+    calDate.setMonth(calDate.getMonth() + dir);
+    renderCalendar();
   };
 
-  // ─── BUILD SLIDESHOW ───
-  var track=document.getElementById('buildTrack');
-  if (track) {
-    var slides=Array.from(track.querySelectorAll('.build-slide'));
-    var dotsWrap=document.getElementById('buildDots');
-    var currentEl=document.getElementById('buildCurrent');
-    var totalEl=document.getElementById('buildTotal');
-    var prevBtn=document.getElementById('buildPrev');
-    var nextBtn=document.getElementById('buildNext');
-    var picker=document.getElementById('buildPicker');
-    var pickBtns=picker?Array.from(picker.querySelectorAll('.build-pick-btn')):[];
-    var current=0, autoTimer=null;
-    if (slides.length && totalEl) {
-      totalEl.textContent=String(slides.length).padStart(2,'0');
-      slides.forEach(function(_,i){
-        var d=document.createElement('button');
-        d.className='build-dot'+(i===0?' active':'');
-        d.addEventListener('click',function(){ goTo(i); });
-        if(dotsWrap) dotsWrap.appendChild(d);
-      });
-      function goTo(idx){
-        slides[current].classList.remove('active');
-        if(dotsWrap&&dotsWrap.children[current]) dotsWrap.children[current].classList.remove('active');
-        if(pickBtns[current]) pickBtns[current].classList.remove('active');
-        current=(idx+slides.length)%slides.length;
-        track.style.transform='translateX(-'+(current*100)+'%)';
-        slides[current].classList.add('active');
-        if(dotsWrap&&dotsWrap.children[current]) dotsWrap.children[current].classList.add('active');
-        if(pickBtns[current]) pickBtns[current].classList.add('active');
-        if(currentEl) currentEl.textContent=String(current+1).padStart(2,'0');
-        resetAuto();
-      }
-      function resetAuto(){ clearInterval(autoTimer); autoTimer=setInterval(function(){ goTo(current+1); },6000); }
-      pickBtns.forEach(function(btn){ btn.addEventListener('click',function(){ goTo(parseInt(btn.getAttribute('data-slide'),10)); }); });
-      if(prevBtn) prevBtn.addEventListener('click',function(){ goTo(current-1); });
-      if(nextBtn) nextBtn.addEventListener('click',function(){ goTo(current+1); });
-      resetAuto();
-    }
+  // Run immediately and also on DOMContentLoaded as fallback
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderCalendar);
+  } else {
+    renderCalendar();
   }
+})();
+</script>
 
-}); // end DOMContentLoaded
-
-function closeLightbox(){
-  var lb=document.getElementById('lightbox');
+</body>
+</html>
