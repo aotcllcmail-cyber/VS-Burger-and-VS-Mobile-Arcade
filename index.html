@@ -2091,7 +2091,7 @@
           <div class="contact-item">
             <div class="contact-icon">✉️</div>
             <div class="contact-text">
-              <a href="#" onclick="this.href='mail'+'to:'+'vsmobilearcade'+'@gmail.com';return true;">vsmobilearcade&#64;gmail.com</a>
+              <a href="#" id="email-contact" onclick="this.href='mail'+'to:'+'vsmobilearcade'+'@gmail.com';return true;">vsmobilearcade&#64;gmail.com</a>
               <small>Send us an Email</small>
             </div>
           </div>
@@ -2115,7 +2115,7 @@
       <div class="booking-form reveal reveal-delay-2">
         <div class="section-label" style="margin-bottom:12px;">Request a Booking</div>
         <div class="form-title">Fill Out The Form</div>
-        <form id="bookingForm" onsubmit="submitForm(event)">
+        <form id="bookingForm">
           <div class="form-row">
             <div class="form-group">
               <label>First Name</label>
@@ -2186,18 +2186,18 @@
           <div class="calendar-wrap">
             <div class="calendar-label">Select Preferred Start Time</div>
             <div class="time-picker-grid" id="timePicker">
-              <button type="button" class="time-slot" data-time="9:00 AM">9:00 AM</button>
-              <button type="button" class="time-slot" data-time="10:00 AM">10:00 AM</button>
-              <button type="button" class="time-slot" data-time="11:00 AM">11:00 AM</button>
-              <button type="button" class="time-slot" data-time="12:00 PM">12:00 PM</button>
-              <button type="button" class="time-slot" data-time="1:00 PM">1:00 PM</button>
-              <button type="button" class="time-slot" data-time="2:00 PM">2:00 PM</button>
-              <button type="button" class="time-slot" data-time="3:00 PM">3:00 PM</button>
-              <button type="button" class="time-slot" data-time="4:00 PM">4:00 PM</button>
-              <button type="button" class="time-slot" data-time="5:00 PM">5:00 PM</button>
-              <button type="button" class="time-slot" data-time="6:00 PM">6:00 PM</button>
-              <button type="button" class="time-slot" data-time="7:00 PM">7:00 PM</button>
-              <button type="button" class="time-slot" data-time="8:00 PM">8:00 PM</button>
+              <button type="button" class="time-slot" data-time="9:00 AM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 9:00 AM';if(inp)inp.value='9:00 AM';}).call(this)">9:00 AM</button>
+              <button type="button" class="time-slot" data-time="10:00 AM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 10:00 AM';if(inp)inp.value='10:00 AM';}).call(this)">10:00 AM</button>
+              <button type="button" class="time-slot" data-time="11:00 AM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 11:00 AM';if(inp)inp.value='11:00 AM';}).call(this)">11:00 AM</button>
+              <button type="button" class="time-slot" data-time="12:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 12:00 PM';if(inp)inp.value='12:00 PM';}).call(this)">12:00 PM</button>
+              <button type="button" class="time-slot" data-time="1:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 1:00 PM';if(inp)inp.value='1:00 PM';}).call(this)">1:00 PM</button>
+              <button type="button" class="time-slot" data-time="2:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 2:00 PM';if(inp)inp.value='2:00 PM';}).call(this)">2:00 PM</button>
+              <button type="button" class="time-slot" data-time="3:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 3:00 PM';if(inp)inp.value='3:00 PM';}).call(this)">3:00 PM</button>
+              <button type="button" class="time-slot" data-time="4:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 4:00 PM';if(inp)inp.value='4:00 PM';}).call(this)">4:00 PM</button>
+              <button type="button" class="time-slot" data-time="5:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 5:00 PM';if(inp)inp.value='5:00 PM';}).call(this)">5:00 PM</button>
+              <button type="button" class="time-slot" data-time="6:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 6:00 PM';if(inp)inp.value='6:00 PM';}).call(this)">6:00 PM</button>
+              <button type="button" class="time-slot" data-time="7:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 7:00 PM';if(inp)inp.value='7:00 PM';}).call(this)">7:00 PM</button>
+              <button type="button" class="time-slot" data-time="8:00 PM" onclick="(function(){var tp=document.getElementById('timePicker');if(tp)tp.querySelectorAll('.time-slot').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');var lbl=document.getElementById('selectedTimeLabel');var inp=document.getElementById('preferred_time_input');if(lbl)lbl.textContent='✓ Selected: 8:00 PM';if(inp)inp.value='8:00 PM';}).call(this)">8:00 PM</button>
             </div>
             <div class="selected-time" id="selectedTimeLabel"></div>
             <input type="hidden" name="preferred_time" id="preferred_time_input">
@@ -2237,7 +2237,7 @@
         <div class="footer-heading">Contact</div>
         <ul class="footer-links">
           <li><a href="tel:7735777182">📞 (773) 577-7182</a></li>
-          <li><a href="#" onclick="this.href='mail'+'to:'+'vsmobilearcade'+'@gmail.com';return true;">✉️ vsmobilearcade&#64;gmail.com</a></li>
+          <li><a href="#" id="email-footer" onclick="this.href='mail'+'to:'+'vsmobilearcade'+'@gmail.com';return true;">✉️ vsmobilearcade&#64;gmail.com</a></li>
           <li><a>📍 Chicago, IL &amp; Surrounding Areas</a></li>
           <li><a href="https://www.instagram.com/versusmobilearcade/?hl=en" target="_blank">📷 @versusmobilearcade</a></li>
           <li><a href="https://www.facebook.com/search/top?q=versus%20mobile%20arcade" target="_blank">👍 Versus Mobile Arcade</a></li>
@@ -2318,6 +2318,73 @@
   } else {
     renderCalendar();
   }
+})();
+</script>
+
+
+<script>
+(function() {
+  var form = document.getElementById('bookingForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending…';
+    btn.style.opacity = '0.7';
+    btn.style.pointerEvents = 'none';
+
+    var params = {
+      first_name:       (form.querySelector('[name="first_name"]') || {}).value || '',
+      last_name:        (form.querySelector('[name="last_name"]') || {}).value || '',
+      phone:            (form.querySelector('[name="phone"]') || {}).value || '',
+      reply_to:         (form.querySelector('[name="reply_to"]') || {}).value || 'Not provided',
+      event_type:       (form.querySelector('[name="event_type"]') || {}).value || 'Not specified',
+      package_interest: (form.querySelector('[name="package_interest"]') || {}).value || 'Not specified',
+      preferred_date:   (document.getElementById('preferred_date_input') || {}).value || 'Not specified',
+      preferred_time:   (document.getElementById('preferred_time_input') || {}).value || 'Not specified',
+      message:          (form.querySelector('[name="message"]') || {}).value || 'None'
+    };
+
+    var recipients = ['aotcllcmail@gmail.com', 'vsmobilearcade@gmail.com', 'versusmobilearcade@gmail.com'];
+
+    if (typeof emailjs === 'undefined') {
+      btn.textContent = '⚠ EmailJS not loaded. Please call (773) 577-7182.';
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+      return;
+    }
+
+    emailjs.init({ publicKey: '5mfYES39vq8YEQNYj' });
+
+    var sends = recipients.map(function(to_email) {
+      return emailjs.send('service_g7xmssd', 'template_d2vofal', Object.assign({}, params, { to_email: to_email }));
+    });
+    Promise.all(sends)
+      .then(function() {
+        btn.textContent = '✓ Your Request Has Been Received!';
+        btn.style.background = '#1A7A2E';
+        btn.style.borderColor = '#1A7A2E';
+        btn.style.boxShadow = '0 8px 24px rgba(26,122,46,0.4)';
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'none';
+        form.reset();
+        // Reset time picker
+        document.querySelectorAll('.time-slot').forEach(function(s) { s.classList.remove('selected'); });
+        var tl = document.getElementById('selectedTimeLabel');
+        if (tl) tl.textContent = '';
+        var dl = document.getElementById('selectedDateLabel');
+        if (dl) dl.textContent = '';
+      })
+      .catch(function(err) {
+        console.error('EmailJS error:', err);
+        btn.textContent = 'Send Booking Request →';
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+        alert('Something went wrong. Please call us at (773) 577-7182.');
+      });
+  });
 })();
 </script>
 
