@@ -1814,7 +1814,7 @@
     <div class="section-label reveal">Services</div>
     <h2 class="section-title reveal">Build Your<br>Event</h2>
 
-      <div class="build-picker" id="buildPicker">
+      <div class="build-picker" id="buildPicker" style="position:relative;z-index:20;">
         <button class="build-pick-btn active" data-slide="0" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=0;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🕹️</span>
           <span class="build-pick-label">VS Arcade</span>
@@ -1840,18 +1840,6 @@
           <span class="build-pick-label">Family Games</span>
         </button>
         <button class="build-pick-btn" data-slide="6" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=6;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
-          <span class="build-pick-icon">🎈</span>
-          <span class="build-pick-label">Decorations</span>
-        </button>
-        <button class="build-pick-btn" data-slide="7" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=7;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
-          <span class="build-pick-icon">🖥️</span>
-          <span class="build-pick-label">Extra Displays</span>
-        </button>
-        <button class="build-pick-btn" data-slide="8" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=8;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
-          <span class="build-pick-icon">🪑</span>
-          <span class="build-pick-label">Tables & Chairs</span>
-        </button>
-        <button class="build-pick-btn" data-slide="9" onclick="(function(){var t=document.getElementById('buildTrack');if(!t)return;var s=Array.from(t.querySelectorAll('.build-slide'));var p=document.getElementById('buildPicker');var bs=p?Array.from(p.querySelectorAll('.build-pick-btn')):[];var idx=9;s.forEach(function(x){x.classList.remove('active');});bs.forEach(function(x){x.classList.remove('active');});s[idx]&&s[idx].classList.add('active');bs[idx]&&bs[idx].classList.add('active');t.style.transform='translateX(-'+(idx*100)+'%)';var c=document.getElementById('buildCurrent');if(c)c.textContent=String(idx+1).padStart(2,'0');})()">
           <span class="build-pick-icon">🍔</span>
           <span class="build-pick-label">VS Burger</span>
         </button>
@@ -1860,7 +1848,7 @@
       <div class="build-track-wrap">
         <div class="build-track" id="buildTrack">
 
-          <!-- Slide 1: VS Mobile Arcade -->
+          <!-- Slide 1 -->
           <div class="build-slide active">
             <div class="build-slide-visual">
               <div class="build-slide-num">01</div>
@@ -1874,7 +1862,7 @@
             </div>
           </div>
 
-          <!-- Slide 2: AOTC Mobile Displays -->
+          <!-- Slide 2 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">02</div>
@@ -1888,7 +1876,7 @@
             </div>
           </div>
 
-          <!-- Slide 3: Pop-Up VR -->
+          <!-- Slide 3 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">03</div>
@@ -1897,12 +1885,12 @@
             </div>
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
-              <div class="build-slide-name">Pop-Up VR</div>
+              <div class="build-slide-name">Pop-Up VR Experience</div>
               <div class="build-slide-desc">A next level, on-site virtual reality space. Guests can step into immersive VR worlds — a guaranteed crowd-pleaser for all ages at birthdays, corporate events, and more.</div>
             </div>
           </div>
 
-          <!-- Slide 4: Bouncy House -->
+          <!-- Slide 4 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">04</div>
@@ -1916,7 +1904,7 @@
             </div>
           </div>
 
-          <!-- Slide 5: Photo Booth -->
+          <!-- Slide 5 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">05</div>
@@ -1930,7 +1918,7 @@
             </div>
           </div>
 
-          <!-- Slide 6: Adult/Family Games -->
+          <!-- Slide 6 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">06</div>
@@ -1944,54 +1932,12 @@
             </div>
           </div>
 
-          <!-- Slide 7: Decorative Displays -->
+          <!-- Slide 7 -->
           <div class="build-slide">
             <div class="build-slide-visual">
               <div class="build-slide-num">07</div>
-              <div class="build-slide-icon">🎈</div>
-              <div class="build-slide-tag">Atmosphere</div>
-            </div>
-            <div class="build-slide-content">
-              <div class="build-slide-label">Add to Your Event</div>
-              <div class="build-slide-name">Decorative Displays</div>
-              <div class="build-slide-desc">Custom decorative setups designed to enhance the visual atmosphere of your event and complement your theme or branding — balloons, backdrops, red carpet, and more.</div>
-            </div>
-          </div>
-
-          <!-- Slide 8: Additional Mobile Displays -->
-          <div class="build-slide">
-            <div class="build-slide-visual">
-              <div class="build-slide-num">08</div>
-              <div class="build-slide-icon">🖥️</div>
-              <div class="build-slide-tag">Signage</div>
-            </div>
-            <div class="build-slide-content">
-              <div class="build-slide-label">Add to Your Event</div>
-              <div class="build-slide-name">Additional Mobile Displays</div>
-              <div class="build-slide-desc">2 portable digital monitors that display custom messages, birthday greetings, logos, schedules, or event signage. Perfect for welcoming guests, highlighting sponsors, or adding personalized visuals.</div>
-            </div>
-          </div>
-
-          <!-- Slide 9: Chair & Table Rental -->
-          <div class="build-slide">
-            <div class="build-slide-visual">
-              <div class="build-slide-num">09</div>
-              <div class="build-slide-icon">🪑</div>
-              <div class="build-slide-tag">Comfort</div>
-            </div>
-            <div class="build-slide-content">
-              <div class="build-slide-label">Add to Your Event</div>
-              <div class="build-slide-name">Chair &amp; Table Rental</div>
-              <div class="build-slide-desc">Convenient seating and table solutions to comfortably accommodate guests during your event.</div>
-            </div>
-          </div>
-
-          <!-- Slide 10: VS Burger -->
-          <div class="build-slide">
-            <div class="build-slide-visual">
-              <div class="build-slide-num">10</div>
               <div class="build-slide-icon">🍔</div>
-              <div class="build-slide-tag">Food & Drinks</div>
+              <div class="build-slide-tag">Food &amp; Drinks</div>
             </div>
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
@@ -2009,7 +1955,7 @@
           <button class="build-arrow" id="buildNext">&#8594;</button>
         </div>
         <div class="build-dots" id="buildDots"></div>
-        <div class="build-counter"><span id="buildCurrent">01</span> / <span id="buildTotal">10</span></div>
+        <div class="build-counter"><span id="buildCurrent">01</span> / <span id="buildTotal">07</span></div>
       </div>
     </div>
 
