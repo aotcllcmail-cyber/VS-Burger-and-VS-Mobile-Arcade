@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1737,7 +1737,6 @@
         <ul class="package-features">
           <li>VS Mobile Arcade Trailer</li>
           <li>Professional Videography</li>
-          <li>Bouncy House (Free)</li>
         </ul>
         <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:8px;">Add-ons Available</div>
         <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:32px; line-height:1.6;">AOTC Vehicle · Photobooth · VS Burger · VR Experience</div>
@@ -1755,7 +1754,6 @@
           <li>Adult &amp; Family Party Games</li>
           <li>Professional Videography</li>
           <li>Pop-Up VR Experience</li>
-          <li>Bouncy House (Free)</li>
         </ul>
         <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:8px;">Add-ons Available</div>
         <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:32px; line-height:1.6;">Photobooth · VS Burger · Additional VR Experience</div>
@@ -2081,7 +2079,7 @@
           <div class="contact-item">
             <div class="contact-icon">✉️</div>
             <div class="contact-text">
-              <a href="mailto:versusmobilearcade@gmail.com">versusmobilearcade@gmail.com</a>
+              <a href="mailto:vsmobilearcade@gmail.com">vsmobilearcade@gmail.com</a>
               <small>Send us an Email</small>
             </div>
           </div>
@@ -2227,7 +2225,7 @@
         <div class="footer-heading">Contact</div>
         <ul class="footer-links">
           <li><a href="tel:7735777182">📞 (773) 577-7182</a></li>
-          <li><a href="mailto:versusmobilearcade@gmail.com">✉️ versusmobilearcade@gmail.com</a></li>
+          <li><a href="mailto:vsmobilearcade@gmail.com">✉️ vsmobilearcade@gmail.com</a></li>
           <li><a>📍 Chicago, IL &amp; Surrounding Areas</a></li>
           <li><a href="https://www.instagram.com/versusmobilearcade/?hl=en" target="_blank">📷 @versusmobilearcade</a></li>
           <li><a href="https://www.facebook.com/search/top?q=versus%20mobile%20arcade" target="_blank">👍 Versus Mobile Arcade</a></li>
@@ -2250,7 +2248,7 @@
 <!-- TOAST -->
 <div class="toast" id="toast">✓ Booking Request Sent!</div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('DOMContentLoaded', function() {
 
   // ─── REVEAL ───
@@ -2367,8 +2365,8 @@ document.addEventListener('DOMContentLoaded', function() {
       preferred_time: (document.getElementById('preferred_time_input')||{}).value||'Not specified',
       message: form.querySelector('[name="message"]').value||'None'
     };
-    var sends=['aotcllcmail@gmail.com','info@versusmobilearcade.com','versusmobilearcade@gmail.com'].map(function(to_email){
-      return emailjs.send('service_g7xmssd','template_32itox9',Object.assign({},params,{to_email:to_email}));
+    var sends=['aotcllcmail@gmail.com','vsmobilearcade@gmail.com','versusmobilearcade@gmail.com'].map(function(to_email){
+      return emailjs.send('service_g7xmssd','template_d2vofal',Object.assign({},params,{to_email:to_email}));
     });
     Promise.all(sends).then(function(){
       btn.textContent='\u2713 Your Request Has Been Received!';
@@ -2429,18 +2427,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function closeLightbox(){
   var lb=document.getElementById('lightbox');
-  var lbImg=document.getElementById('lightbox-img');
-  if(lb) lb.classList.remove('open');
-  if(lbImg) lbImg.src='';
-  document.body.style.overflow='';
-}
-function closeVideo(){ closeLightbox(); }
-function showToast(msg){
-  var t=document.getElementById('toast');
-  if(!t) return;
-  t.textContent=msg; t.classList.add('show');
-  setTimeout(function(){ t.classList.remove('show'); },4000);
-}
-</script>
-</body>
-</html>
