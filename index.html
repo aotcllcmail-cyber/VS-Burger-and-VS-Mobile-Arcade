@@ -1234,6 +1234,30 @@
 
   .gallery-item.lightbox-trigger:hover::after { opacity: 0.3; }
 
+
+  .slide-price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+  }
+  .slide-price-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: var(--red);
+    line-height: 1;
+  }
+  .slide-price-unit {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
   /* ─── SCROLL ANIMATIONS ─── */
   .reveal {
     opacity: 1;
@@ -1750,57 +1774,93 @@
   <div class="container">
     <div class="section-label reveal">Packages</div>
     <h2 class="section-title reveal">Choose<br>Your Package</h2>
-    <div class="packages-grid">
+    <div class="packages-grid" style="grid-template-columns: repeat(2, 1fr);">
 
+      <!-- Starter A -->
       <div class="package-card reveal">
-        <div class="package-tier">Tier 01</div>
-        <div class="package-name">The Starter Pack</div>
-        
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:20px;">Small Birthdays &amp; Short Events</div>
+        <div class="package-tier">Starter Tier A</div>
+        <div class="package-name">Arcade Classic</div>
+        <div class="package-price">$225<span>/ hr</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:20px;">VS Mobile Arcade Trailer — the full 32ft gaming experience</div>
         <ul class="package-features">
-          <li>VS Mobile Arcade Trailer</li>
-          <li>Professional Videography</li>
+          <li>VS Mobile Arcade Trailer (32ft)</li>
+          <li>16,000+ video games</li>
+          <li>On-site attendant</li>
+          <li>Setup &amp; breakdown</li>
         </ul>
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:8px;">Add-ons Available</div>
-        <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:32px; line-height:1.6;">AOTC Vehicle · Photobooth · VS Burger · VR Experience</div>
         <a href="#booking" class="package-btn">Book Now</a>
       </div>
 
-      <div class="package-card featured reveal reveal-delay-1">
-        <div class="package-tier">⭐ Most Popular · Tier 02</div>
-        <div class="package-name">The Power-Up</div>
-        
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:20px;">Birthdays, Family &amp; Private Events</div>
+      <!-- Starter B -->
+      <div class="package-card reveal reveal-delay-1">
+        <div class="package-tier">Starter Tier B</div>
+        <div class="package-name">Billboard Bash</div>
+        <div class="package-price">$300<span>/ hr</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:20px;">AOTC Mobile Gaming Vehicle — LED billboard + gaming on wheels</div>
         <ul class="package-features">
-          <li>AOTC Vehicle Display</li>
-          <li>VS Mobile Arcade Trailer</li>
-          <li>Adult &amp; Family Party Games</li>
-          <li>Professional Videography</li>
-          <li>Pop-Up VR Experience</li>
+          <li>AOTC Mobile Gaming Vehicle</li>
+          <li>Live LED billboard display</li>
+          <li>Mobile gaming setup</li>
+          <li>On-site attendant</li>
+          <li>Setup &amp; breakdown</li>
         </ul>
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:8px;">Add-ons Available</div>
-        <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:32px; line-height:1.6;">Photobooth · VS Burger · Additional VR Experience</div>
         <a href="#booking" class="package-btn">Book Now</a>
       </div>
 
-      <div class="package-card reveal reveal-delay-2">
-        <div class="package-tier">Tier 03 · Signature</div>
+      <!-- Mid A -->
+      <div class="package-card reveal">
+        <div class="package-tier">Mid Tier A</div>
+        <div class="package-name">The Power Up</div>
+        <div class="package-price">$525<span>/ hr + $35 flat</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:8px;">Both vehicles + Adult &amp; Family Party Games</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:16px;">You save $40 on flat-rate add-ons</div>
+        <ul class="package-features">
+          <li>VS Mobile Arcade Trailer (32ft)</li>
+          <li>AOTC Mobile Gaming Vehicle + LED Billboard</li>
+          <li>Adult &amp; Family Party Games (flat rate)</li>
+          <li>2 on-site attendants</li>
+          <li>Setup &amp; breakdown</li>
+        </ul>
+        <a href="#booking" class="package-btn">Book Now</a>
+      </div>
+
+      <!-- Mid B -->
+      <div class="package-card reveal">
+        <div class="package-tier">Mid Tier B</div>
+        <div class="package-name">Boss Mode</div>
+        <div class="package-price">$525<span>/ hr + $160 flat</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:8px;">Both vehicles + games, bouncy house &amp; pop-up VR</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:16px;">You save $170 on flat-rate add-ons</div>
+        <ul class="package-features">
+          <li>VS Mobile Arcade Trailer (32ft)</li>
+          <li>AOTC Mobile Gaming Vehicle + LED Billboard</li>
+          <li>Adult &amp; Family Party Games (flat rate)</li>
+          <li>Bouncy House (flat rate)</li>
+          <li>Pop-Up VR Experience (flat rate)</li>
+          <li>2 on-site attendants</li>
+          <li>Setup &amp; breakdown</li>
+        </ul>
+        <a href="#booking" class="package-btn">Book Now</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="package-card featured reveal" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto; width: 100%;">
+        <div class="package-tier">⭐ Most Popular · Premium · All-Inclusive</div>
         <div class="package-name">The Cheat Code</div>
-        
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:20px;">Large Parties, Corporate &amp; Festivals</div>
+        <div class="package-price">$700<span>/ hr + $235 flat</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gray); margin-bottom:8px;">Every offering deployed — the complete VS takeover</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:16px;">You save $245 on flat-rate add-ons</div>
         <ul class="package-features">
-          <li>AOTC Vehicle Display</li>
-          <li>VS Mobile Arcade Trailer</li>
-          <li>Adult &amp; Family Party Games</li>
-          <li>Professional Videography</li>
-          <li>Pop-Up VR Experience</li>
-          <li>Bouncy House</li>
-          <li>Photobooth</li>
-          <li>Event Host / Game Coordinator</li>
-          <li>Highlight Reel Video</li>
+          <li>VS Mobile Arcade Trailer (32ft)</li>
+          <li>AOTC Mobile Gaming Vehicle + LED Billboard</li>
+          <li>Pop-Up VR Experience (flat rate)</li>
+          <li>Bouncy House (flat rate)</li>
+          <li>Photo Booth (flat rate)</li>
+          <li>Adult &amp; Family Party Games (flat rate)</li>
+          <li>3 on-site attendants</li>
+          <li>Priority booking</li>
+          <li>Setup &amp; breakdown included</li>
         </ul>
-        <div style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green-neon); margin-bottom:8px;">Add-ons Available</div>
-        <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:32px; line-height:1.6;">VS Burger · Custom Branding on AOTC Vehicle</div>
         <a href="#booking" class="package-btn">Book Now</a>
       </div>
 
@@ -1858,7 +1918,9 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">VS Mobile Arcade</div>
+              <div class="slide-price"><span class="slide-price-amount">$225.00</span><span class="slide-price-unit">Per Hour</span></div>
               <div class="build-slide-desc">A 32-foot climate-controlled studio loaded with PS5, Xbox, Nintendo Switch, and 7 Arcade1Up machines — over 16,000 games ready to play at your event, rain or shine.</div>
+              <div style="margin-top:14px; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); border-top:1px solid rgba(255,255,255,0.08); padding-top:14px;">+ $45/hr after the first 2 hours</div>
             </div>
           </div>
 
@@ -1872,7 +1934,9 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">AOTC Mobile Digital Displays</div>
+              <div class="slide-price"><span class="slide-price-amount">$300.00</span><span class="slide-price-unit">Per Hour</span></div>
               <div class="build-slide-desc">The AOTC LED display truck features 4 large screens, external audio, and custom video content — perfect for event signage, brand displays, photograph backdrops, and the ultimate gaming experience.</div>
+              <div style="margin-top:14px; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); border-top:1px solid rgba(255,255,255,0.08); padding-top:14px;">+ $45/hr after the first 2 hours</div>
             </div>
           </div>
 
@@ -1886,6 +1950,7 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">Pop-Up VR Experience</div>
+              <div class="slide-price"><span class="slide-price-amount">$175.00</span><span class="slide-price-unit">Per Hour</span></div>
               <div class="build-slide-desc">A next level, on-site virtual reality space. Guests can step into immersive VR worlds — a guaranteed crowd-pleaser for all ages at birthdays, corporate events, and more.</div>
             </div>
           </div>
@@ -1900,6 +1965,7 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">Bouncy House</div>
+              <div class="slide-price"><span class="slide-price-amount">$80.00</span><span class="slide-price-unit">Flat Rate</span></div>
               <div class="build-slide-desc">A colorful 13×13 Crayon Castle bouncy house that keeps kids active and entertained throughout the event. Available as an add-on or included in select packages.</div>
             </div>
           </div>
@@ -1914,6 +1980,7 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">Photo Booth</div>
+              <div class="slide-price"><span class="slide-price-amount">$150.00</span><span class="slide-price-unit">Flat Rate</span></div>
               <div class="build-slide-desc">A fun, interactive photo booth experience that lets guests capture and share memorable moments from your event.</div>
             </div>
           </div>
@@ -1928,6 +1995,7 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">Adult / Family Games</div>
+              <div class="slide-price"><span class="slide-price-amount">$75.00</span><span class="slide-price-unit">Flat Rate</span></div>
               <div class="build-slide-desc">A curated collection of classic lawn and party games designed to keep guests of all ages engaged and interacting.</div>
             </div>
           </div>
@@ -1942,6 +2010,7 @@
             <div class="build-slide-content">
               <div class="build-slide-label">Add to Your Event</div>
               <div class="build-slide-name">VS Burger</div>
+              <div class="slide-price"><span class="slide-price-unit" style="color:var(--green-neon);font-size:12px;letter-spacing:1.5px;">Contact VS Burger For Booking Information</span></div>
               <div class="build-slide-desc">Fresh, made-to-order burgers, wings, Italian beef, walking tacos, and more served straight from the VS Burger truck. Every order comes with fresh-cut fries — the perfect food option for any event.</div>
             </div>
           </div>
@@ -2110,9 +2179,11 @@
             <label>Package Interest</label>
             <select name="package_interest">
               <option value="" disabled selected>Select a package</option>
-              <option>The Starter Pack (Tier 01)</option>
-              <option>The Power-Up (Tier 02)</option>
-              <option>The Cheat Code (Tier 03)</option>
+              <option>Arcade Classic — Starter A ($225/hr)</option>
+              <option>Billboard Bash — Starter B ($300/hr)</option>
+              <option>The Power Up — Mid Tier A ($525/hr + $35 flat)</option>
+              <option>Boss Mode — Mid Tier B ($525/hr + $160 flat)</option>
+              <option>The Cheat Code — Premium ($700/hr + $235 flat)</option>
               <option>Not Sure Yet</option>
             </select>
           </div>
